@@ -34,7 +34,7 @@ Troubleshooting
 3. Post to http://www.tonymacx86.com/audio/76309-mountain-lion-multibeast-no-audio-solutions-problem-reporting.html
 
 Credit
-bcc9
+bcc9 http://www.insanelymac.com/forum/topic/290783-intel-hd-graphics-4600-haswell-working-displayport/?p=1934889
 
 toleda
 https://github.com/toleda/audio_ssdt_enabler
