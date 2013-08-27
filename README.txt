@@ -35,6 +35,7 @@ Troubleshooting
 
 Credit
 bcc9 http://www.insanelymac.com/forum/topic/290783-intel-hd-graphics-4600-haswell-working-displayport/?p=1934889
+PikeRAlpha https://pikeralpha.wordpress.com/2013/06/16/intel-hd4600-with-full-resolution/
 
 toleda
 https://github.com/toleda/audio_ssdt_enabler
