@@ -18,15 +18,16 @@ In ML, ssdt-hdae-12 supports
 Download
 1. https://github.com/toleda/audio_ssdt_enabler
 2. Select: audio_ssdt-hdae-1.zip, audio_ssdt-hdae-2.zip or audio_ssdt-hdae-12.zip
-3. Select: Raw Data
-4. Select: Save
-5. Select: Use .zip (to Save, not .aml)
+3. Select: View Raw
+4. Select: Save as .zip
 
 Installation
 Copy Download/audio_ssdt-hdae-1/SSDT-1.aml or audio_ssdt-hdae-2/SSDT-1.aml to Extra
 1. If Extra/SSDT.aml is present, install Downloads/audio_ssdt-hdae-1/SSDT-1.aml or audio_ssdt-hdae-2/SSDT-1.aml as Extra/SSDT-1.aml
 2. If no Extra/SSDT.aml, rename Downloads/audio_ssdt-hdae-1/SSDT-1.aml or audio_ssdt-hdae-2/SSDT-1.amlto SSDT.aml and install as Extra/SSDT.aml
 3. The 1st SSDT is SSDT, 2nd is SSDT-1, 3rd is SSDT-2, etc.; no gaps
+4. Enable SSDT (Chameleon/Chimera - DropSSDT, Clover - DropOem)
+5. Rebuild kernel cache
 
 Troubleshooting
 1. ML-Patched ALC AppleHDA Capabilities.pdf https://github.com/toleda/audio_ALCInjection
