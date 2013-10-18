@@ -21,8 +21,11 @@ Download
 3. Select: View Raw
 4. Select: Save as .zip
 
+Tools
+1. Rebuild kernel cache - http://sourceforge.net/projects/dpcimanager/
+
 Installation
-1. Copy Downloads/audio_ssdt-hdmi.. . ./SSDT-1.aml to Extra
+1. Copy Downloads/audio_ssdt-hdae-.. . ./SSDT-1.aml to Extra
 1a. If Extra/SSDT.aml is present, install SSDT-1.aml as is: Extra/SSDT-1.aml
 1b. If no Extra/SSDT.aml, rename SSDT-1.aml to SSDT.aml and install as: Extra/SSDT.aml
 1c. The 1st SSDT is SSDT, 2nd is SSDT-1, 3rd is SSDT-2, etc.; no gaps
