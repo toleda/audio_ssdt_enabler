@@ -24,10 +24,14 @@ Download
 Tools
 1. Rebuild kernel cache - http://sourceforge.net/projects/dpcimanager/
 
+Location.aml - ssdt.aml installation folder
+1. Chameleon/Chimera - Extra/
+2. Clover - EFI/Clover/ACPI/Patched/
+
 Installation
-1. Copy Downloads/audio_ssdt-hdae-.. . ./SSDT-1.aml to Extra
-1a. If Extra/SSDT.aml is present, install SSDT-1.aml as is: Extra/SSDT-1.aml
-1b. If no Extra/SSDT.aml, rename SSDT-1.aml to SSDT.aml and install as: Extra/SSDT.aml
+1. Copy Downloads/audio_ssdt-hdae-.. . ./SSDT-1.aml to Location.aml
+1a. If Location.aml/SSDT.aml is present, install SSDT-1.aml as is: Location.aml/SSDT-1.aml
+1b. If no Location.aml/SSDT.aml, rename SSDT-1.aml to SSDT.aml and install as: Location.aml/SSDT.aml
 1c. The 1st SSDT is SSDT, 2nd is SSDT-1, 3rd is SSDT-2, etc.; no gaps
 2. Enable SSDT (Chameleon/Chimera - DropSSDT, Clover - DropOem)
 3. Rebuild kernel cache
