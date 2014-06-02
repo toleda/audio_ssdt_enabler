@@ -1,8 +1,12 @@
 audio_ssdt_enabler
 ============
-OS X Realtek ALC885 through ALC1150 Onboard Audio
+OS X Realtek ALC885 through ALC150 Onboard Audio
 
-hdae/ssdt installed with a Patched AppleHDA.kext enables OS X Realtek ALC onboard audio on Intel based motherboards with a bootable clean install of OS X. ssdt-hdae-1 injects Audio_ID = 1,  ssdt-hdae-2 injects Audio_ID = 2 and ssdt-hdae-12 injects Audio_ID = 12 for non-DSDT systems
+hdae/ssdt installed with a Patched AppleHDA.kext enables OS X Realtek ALC onboard audio on Intel based motherboards with a bootable clean install of OS X. ssdt-hdae-1 injects Audio_ID = 1,  ssdt-hdae-2 injects Audio_ID = 2 and ssdt-hdae-12 injects Audio_ID = 12 for native DSDT systems with HDEF.  For native DSDT systems without HDEF, use audio_ssdt-no_hdef-hdae-1 or audio_ssdt-no_hdef-hdae-2.
+
+Verify IOReg/Search: @1B: two choices, 1. With HDEF or 2. Without HDEF 
+
+For dsdts with HDEF (IOReg/HDEF@1B)
 
 ssdt-hdae-1 supports 
 1. Audio_ID: 1 for 3,  5 and 6 port Realtek ALC onboard audio
@@ -15,38 +19,40 @@ ssdt-hdae-2 supports
 ssdt-hdae-12 supports 
 1. Audio_ID: 12 for other IM AppleHDA.kext solutions using layout12
 
+For dsdts without HDEF (IOReg/pci8068,xxxx@1B, ex, xxxx=3b56)
+
+audio_ssdt-no_hdef-hdae-1 supports 
+1. Audio_ID: 1 for 3,  5 and 6 port Realtek ALC onboard audio
+2. Realtek audio codecs: ALC885, ALC887, ALC888, ALC889, ALC892, ALC898, ALC1150
+
+audio_ssdt-no_hdef-hdae-2 supports 
+1. Audio_ID: 2 for 3 port (5.1) Realtek ALC onboard audio
+2. Realtek audio codecs: ALC887, ALC888, ALC889, ALC892, ALC898, ALC1150
+
 Download
 1. https://github.com/toleda/audio_ssdt_enabler
-2. Select: audio_ssdt-hdae-1.zip, audio_ssdt-hdae-2.zip or audio_ssdt-hdae-12.zip
-3. Select: View Raw
-4. Select: Save as .zip
-
-Tools
-1. Rebuild kernel cache - http://sourceforge.net/projects/dpcimanager/
-
-Location.aml - ssdt.aml installation folder
-1. Chameleon/Chimera - Extra/
-2. Clover - EFI/Clover/ACPI/Patched/
+2. Select: audio_ssdt-.....zip
+3. Select: Raw Data
+4. Select: Save
+5. Select: Use .zip (to Save, not .aml)
 
 Installation
-1. Copy Downloads/audio_ssdt-hdae-.. . ./SSDT-1.aml to Location.aml
-1a. If Location.aml/SSDT.aml is present, install SSDT-1.aml as is: Location.aml/SSDT-1.aml
-1b. If no Location.aml/SSDT.aml, rename SSDT-1.aml to SSDT.aml and install as: Location.aml/SSDT.aml
-1c. The 1st SSDT is SSDT, 2nd is SSDT-1, 3rd is SSDT-2, etc.; no gaps
-2. Enable SSDT (Chameleon/Chimera - DropSSDT, Clover - DropOem)
-3. Rebuild kernel cache
-4. Restart
+Copy Download/audio_ssdt.../SSDT-1.aml to Extra
+1. If Extra/SSDT.aml is present, install Downloads/audio_ssdt.../SSDT-1.aml  as Extra/SSDT-1.aml
+2. If no Extra/SSDT.aml, rename Downloads/audio_ssdt..../SSDT-1.aml to SSDT.aml and install as Extra/SSDT.aml
+3. The 1st SSDT is SSDT.aml, 2nd is SSDT-1.aml, 3rd is SSDT-2.aml, etc.; no gaps
 
-Troubleshooting
+Troubleshooting/Problem Reporting
 1. See https://github.com/toleda/audio_ALCInjection/README.txt
 
 Credit
-bcc9 http://www.insanelymac.com/forum/topic/290783-intel-hd-graphics-4600-haswell-working-displayport/?p=1934889
-PikeRAlpha https://pikeralpha.wordpress.com/2013/06/16/intel-hd4600-with-full-resolution/
+bcc9
 
 toleda
 https://github.com/toleda/audio_ssdt_enabler
 audio_ssdt-hdae-1.zip
 audio_ssdt-hdae-2.zip
 audio_ssdt-hdae-12.zip
+audio_ssdt-no_hdef-hdae-1.zip
+audio_ssdt-no_hdef-hdae-2.zip
 README.txt
