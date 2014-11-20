@@ -6,7 +6,7 @@ Update v2 - Added AZAL to HDEF ssdt, revised installation instructions
 
 hdae/ssdt installed with a patched AppleHDA.kext enables OS X Realtek ALC onboard audio. Native DSDT systems with HDEF,  ssdt-hdae-1 injects Audio_ID = 1,  ssdt-hdae-2 injects Audio_ID = 2 and ssdt-hdae-12 injects Audio_ID = 12. For native DSDT systems with AZAL, use ssdt-azal2hdef-hdae-1. Native DSDT systems without HDEF, use audio_ssdt-no_hdef-hdae-1 or audio_ssdt-no_hdef-hdae-2.
 
-DSDT not required, use IOReg (Download and install)
+DSDT not required, use IOReg (Download/View Raw and install)
 IOReg/Search: @1B
 https://github.com/toleda/audio_ALCInjection/blob/master/IORegistryExplorer_v2.1.zip
 
